@@ -70,12 +70,15 @@ namespace projLocadora
             this.produtorasToolStripMenuItem.Name = "produtorasToolStripMenuItem";
             this.produtorasToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.produtorasToolStripMenuItem.Text = "Produtoras";
+            this.produtorasToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.produtorasToolStripMenuItem.Click += new System.EventHandler(this.produtorasToolStripMenuItem_Click);
             // 
             // filmesToolStripMenuItem
             // 
             this.filmesToolStripMenuItem.Name = "filmesToolStripMenuItem";
             this.filmesToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.filmesToolStripMenuItem.Text = "Filmes";
+            this.filmesToolStripMenuItem.Click += new System.EventHandler(this.filmesToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
@@ -106,6 +109,7 @@ namespace projLocadora
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
