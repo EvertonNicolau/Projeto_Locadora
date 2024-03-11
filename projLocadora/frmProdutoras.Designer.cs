@@ -32,12 +32,12 @@ namespace projLocadora
             this.txtCodProd = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtProd = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtTelProd = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.txtEmailProd = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.txtTelProd = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtProd = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnPrimeiro = new System.Windows.Forms.Button();
             this.btnAnterior = new System.Windows.Forms.Button();
             this.btnProximo = new System.Windows.Forms.Button();
@@ -68,7 +68,7 @@ namespace projLocadora
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.groupBox1.BackColor = System.Drawing.Color.PaleVioletRed;
             this.groupBox1.Controls.Add(this.txtEmailProd);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtTelProd);
@@ -85,21 +85,21 @@ namespace projLocadora
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados cadastrais:";
             // 
-            // txtProd
+            // txtEmailProd
             // 
-            this.txtProd.Location = new System.Drawing.Point(423, 44);
-            this.txtProd.Name = "txtProd";
-            this.txtProd.Size = new System.Drawing.Size(241, 26);
-            this.txtProd.TabIndex = 2;
+            this.txtEmailProd.Location = new System.Drawing.Point(423, 152);
+            this.txtEmailProd.Name = "txtEmailProd";
+            this.txtEmailProd.Size = new System.Drawing.Size(241, 26);
+            this.txtEmailProd.TabIndex = 6;
             // 
-            // label2
+            // label4
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(338, 47);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 20);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Produtora:";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(338, 158);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(57, 20);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "E-mail:";
             // 
             // txtTelProd
             // 
@@ -117,21 +117,21 @@ namespace projLocadora
             this.label3.TabIndex = 5;
             this.label3.Text = "Telefone:";
             // 
-            // txtEmailProd
+            // txtProd
             // 
-            this.txtEmailProd.Location = new System.Drawing.Point(423, 152);
-            this.txtEmailProd.Name = "txtEmailProd";
-            this.txtEmailProd.Size = new System.Drawing.Size(241, 26);
-            this.txtEmailProd.TabIndex = 6;
+            this.txtProd.Location = new System.Drawing.Point(423, 44);
+            this.txtProd.Name = "txtProd";
+            this.txtProd.Size = new System.Drawing.Size(241, 26);
+            this.txtProd.TabIndex = 2;
             // 
-            // label4
+            // label2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(338, 158);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 20);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "E-mail:";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(338, 47);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(83, 20);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Produtora:";
             // 
             // btnPrimeiro
             // 
@@ -177,6 +177,7 @@ namespace projLocadora
             this.btnNovo.TabIndex = 7;
             this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // btnSalvar
             // 
@@ -186,6 +187,7 @@ namespace projLocadora
             this.btnSalvar.TabIndex = 8;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnExcluir
             // 
@@ -227,6 +229,7 @@ namespace projLocadora
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Produtoras";
+            this.Load += new System.EventHandler(this.frmProdutoras_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

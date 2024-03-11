@@ -12,6 +12,8 @@ namespace projLocadora
 {
     public partial class frmFilmes : Form
     {
+        bool novo;
+        
         public frmFilmes()
         {
             InitializeComponent();
@@ -33,6 +35,16 @@ namespace projLocadora
         }
 
         private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSalvar_Click(object sender, EventArgs e)
         {
 
         }
