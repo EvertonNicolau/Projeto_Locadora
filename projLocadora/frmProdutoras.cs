@@ -156,7 +156,27 @@ namespace projLocadora
             {
                 con.Close();
             }
-            }
+            btnSalvar.Enabled = true;
+            txtCodProd.Enabled = false;
+            txtEmailProd.Enabled = false;
+            txtProd.Enabled = false;
+            txtTelProd.Enabled = false;
+            btnNovo.Enabled = true;
+            btnAlterar.Enabled = true;
+            btnExcluir.Enabled = true;
+        }
+     
 
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            novo = false;
+            btnNovo.Enabled = false;
+            btnExcluir.Enabled = false;
+            btnSalvar.Enabled = true;
+            txtProd.Enabled = true;
+            txtEmailProd.Enabled = true;
+            txtTelProd.Enabled = true;
+
+        }
     }
 }

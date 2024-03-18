@@ -207,6 +207,7 @@ namespace projLocadora
             this.btnAlterar.TabIndex = 9;
             this.btnAlterar.Text = "Modificar";
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // frmProdutoras
             // 
