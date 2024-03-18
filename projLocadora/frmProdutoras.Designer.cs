@@ -68,7 +68,7 @@ namespace projLocadora
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.PaleVioletRed;
+            this.groupBox1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.groupBox1.Controls.Add(this.txtEmailProd);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtTelProd);
@@ -197,6 +197,7 @@ namespace projLocadora
             this.btnExcluir.TabIndex = 8;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnAlterar
             // 

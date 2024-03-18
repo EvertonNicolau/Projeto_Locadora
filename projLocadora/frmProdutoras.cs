@@ -33,10 +33,33 @@ namespace projLocadora
             txtEmailProd.Enabled = false;
             txtProd.Enabled = false;
             txtTelProd.Enabled = false;
-
-
-                
+            string sql = "SELECT * FROM tb_Produtora";
+            SqlConnection con = new SqlConnection(connectionString);
+            SqlCommand cmd = new SqlCommand(sql, con);
+            cmd.CommandType = CommandType.Text;
+            SqlDataReader reader;
+            con.Open();
+            try
+            {
+                reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    txtCodProd.Text = reader[0].ToString();
+                    txtProd.Text = reader[1].ToString();
+                    txtTelProd.Text = reader[2].ToString();
+                    txtEmailProd.Text = reader[3].ToString();
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.ToString());
+            }
+            finally
+            {
+                con.Close();
+            }
         }
+
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
@@ -83,6 +106,57 @@ namespace projLocadora
                     con.Close();
                 }
             }
+            else
+            {
+                string sql = "UPDATE tb_Produtora SET nomeProd='" + txtProd.Text + "', emailProd='" + txtEmailProd.Text + "', telProd='" + txtTelProd.Text + "' WHERE codProd=" + txtCodProd.Text;
+                SqlConnection con = new SqlConnection(connectionString);
+                SqlCommand cmd = new SqlCommand(sql, con);
+                cmd.CommandType = CommandType.Text;
+                con.Open();
+                try
+                {
+                    int i = cmd.ExecuteNonQuery();
+                    if (i>0)
+                    {
+                        MessageBox.Show("Produtora alterada com sucesso!");
+                    }
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Erro: " + ex.ToString());
+                }
+                finally
+                {
+                    con.Close();
+                }            
+            }
+
         }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            string sql = "DELETE FROM tb_Produtora WHERE codProd=" + txtCodProd.Text;
+            SqlConnection con = new SqlConnection(connectionString);
+            SqlCommand cmd = new SqlCommand(sql, con);
+            cmd.CommandType = CommandType.Text;
+            con.Open();
+            try
+            {
+                int i = cmd.ExecuteNonQuery();
+                if(i > 0)
+                {
+                    MessageBox.Show("Produtora apagada com sucesso!");
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.ToString());
+            }
+            finally
+            {
+                con.Close();
+            }
+            }
+
     }
 }
