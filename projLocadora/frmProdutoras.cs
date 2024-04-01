@@ -251,15 +251,7 @@ namespace projLocadora
                 navegar();
             }
         }
-
-        private void btnAnterior_Click(object sender, EventArgs e)
-        {
-            if(registroAtual>0)
-            {
-                registroAtual--;
-                navegar();
-            }
-        }
+           
         private void btnUltimo_Click(object sender, EventArgs e)
         {
             if (registroAtual < totalRegistros - 1)
@@ -268,9 +260,19 @@ namespace projLocadora
                 navegar();
             }
         }
+
+        private void btnAnterior_Click(object sender, EventArgs e)
+        {
+            if (registroAtual > 0)
+            {
+                registroAtual--;
+                navegar();
+            }
+        }
+
         private void btnPrimeiro_Click(object sender, EventArgs e)
         {
-            if(registroAtual>0)
+            if (registroAtual > 0)
             {
                 registroAtual = 0;
                 navegar();
