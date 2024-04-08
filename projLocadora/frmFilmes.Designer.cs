@@ -183,7 +183,7 @@ namespace projLocadora
             // CodFilme
             // 
             this.CodFilme.AutoSize = true;
-            this.CodFilme.Location = new System.Drawing.Point(225, 95);
+            this.CodFilme.Location = new System.Drawing.Point(219, 86);
             this.CodFilme.Name = "CodFilme";
             this.CodFilme.Size = new System.Drawing.Size(64, 18);
             this.CodFilme.TabIndex = 0;
@@ -197,6 +197,7 @@ namespace projLocadora
             this.txtNovo.TabIndex = 2;
             this.txtNovo.Text = "Novo";
             this.txtNovo.UseVisualStyleBackColor = true;
+            this.txtNovo.Click += new System.EventHandler(this.txtNovo_Click);
             // 
             // txtModificar
             // 
@@ -206,6 +207,7 @@ namespace projLocadora
             this.txtModificar.TabIndex = 3;
             this.txtModificar.Text = "Modificar";
             this.txtModificar.UseVisualStyleBackColor = true;
+            this.txtModificar.Click += new System.EventHandler(this.txtModificar_Click);
             // 
             // btnProximo
             // 
@@ -255,6 +257,7 @@ namespace projLocadora
             this.txtExcluir.TabIndex = 8;
             this.txtExcluir.Text = "Excluir";
             this.txtExcluir.UseVisualStyleBackColor = true;
+            this.txtExcluir.Click += new System.EventHandler(this.txtExcluir_Click);
             // 
             // btnSalvar
             // 

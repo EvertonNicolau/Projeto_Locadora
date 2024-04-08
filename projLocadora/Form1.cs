@@ -30,5 +30,10 @@ namespace projLocadora
             filmes.MdiParent = this;
             filmes.Show();
         }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
