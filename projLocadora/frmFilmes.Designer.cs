@@ -57,7 +57,7 @@ namespace projLocadora
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.DimGray;
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.txtTituloFilme);
@@ -66,10 +66,12 @@ namespace projLocadora
             this.groupBox1.Controls.Add(this.AnoFilme);
             this.groupBox1.Controls.Add(this.txtCodFilme);
             this.groupBox1.Controls.Add(this.CodFilme);
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox1.Location = new System.Drawing.Point(60, 94);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.groupBox1.Location = new System.Drawing.Point(30, 98);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(744, 413);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(873, 385);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informações";
@@ -80,9 +82,11 @@ namespace projLocadora
             this.groupBox3.Controls.Add(this.cmbGenero);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox3.Location = new System.Drawing.Point(394, 250);
+            this.groupBox3.Location = new System.Drawing.Point(452, 206);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(288, 128);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Size = new System.Drawing.Size(403, 164);
             this.groupBox3.TabIndex = 11;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Gêneros";
@@ -96,18 +100,21 @@ namespace projLocadora
             "Terror",
             "Drama",
             "Romance",
-            "Documentário"});
-            this.cmbGenero.Location = new System.Drawing.Point(142, 45);
+            "Documentário",
+            "Ficção Científica"});
+            this.cmbGenero.Location = new System.Drawing.Point(199, 58);
+            this.cmbGenero.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbGenero.Name = "cmbGenero";
-            this.cmbGenero.Size = new System.Drawing.Size(121, 26);
+            this.cmbGenero.Size = new System.Drawing.Size(168, 31);
             this.cmbGenero.TabIndex = 7;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(62, 48);
+            this.label6.Location = new System.Drawing.Point(87, 61);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 18);
+            this.label6.Size = new System.Drawing.Size(84, 23);
             this.label6.TabIndex = 8;
             this.label6.Text = "Gênero";
             // 
@@ -117,9 +124,11 @@ namespace projLocadora
             this.groupBox2.Controls.Add(this.cmbProdutora);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.groupBox2.Location = new System.Drawing.Point(51, 250);
+            this.groupBox2.Location = new System.Drawing.Point(18, 206);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(288, 128);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(403, 164);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Produtora";
@@ -127,73 +136,90 @@ namespace projLocadora
             // cmbProdutora
             // 
             this.cmbProdutora.FormattingEnabled = true;
-            this.cmbProdutora.Location = new System.Drawing.Point(142, 45);
+            this.cmbProdutora.Items.AddRange(new object[] {
+            "Warner",
+            "Disney",
+            "HBO",
+            "Netflix",
+            "Universal",
+            "Paramount",
+            "Sony"});
+            this.cmbProdutora.Location = new System.Drawing.Point(199, 58);
+            this.cmbProdutora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbProdutora.Name = "cmbProdutora";
-            this.cmbProdutora.Size = new System.Drawing.Size(121, 26);
+            this.cmbProdutora.Size = new System.Drawing.Size(168, 31);
             this.cmbProdutora.TabIndex = 7;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(32, 48);
+            this.label4.Location = new System.Drawing.Point(45, 61);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 18);
+            this.label4.Size = new System.Drawing.Size(117, 23);
             this.label4.TabIndex = 8;
             this.label4.Text = "Produtora";
             // 
             // txtTituloFilme
             // 
-            this.txtTituloFilme.Location = new System.Drawing.Point(289, 53);
+            this.txtTituloFilme.Location = new System.Drawing.Point(319, 57);
+            this.txtTituloFilme.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTituloFilme.Name = "txtTituloFilme";
-            this.txtTituloFilme.Size = new System.Drawing.Size(282, 27);
+            this.txtTituloFilme.Size = new System.Drawing.Size(393, 30);
             this.txtTituloFilme.TabIndex = 5;
             // 
             // TituloFilme
             // 
             this.TituloFilme.AutoSize = true;
-            this.TituloFilme.Location = new System.Drawing.Point(225, 56);
+            this.TituloFilme.Location = new System.Drawing.Point(213, 57);
+            this.TituloFilme.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TituloFilme.Name = "TituloFilme";
-            this.TituloFilme.Size = new System.Drawing.Size(55, 18);
+            this.TituloFilme.Size = new System.Drawing.Size(73, 23);
             this.TituloFilme.TabIndex = 4;
             this.TituloFilme.Text = "Título";
             // 
             // txtAnoFilme
             // 
-            this.txtAnoFilme.Location = new System.Drawing.Point(289, 119);
+            this.txtAnoFilme.Location = new System.Drawing.Point(319, 133);
+            this.txtAnoFilme.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAnoFilme.Name = "txtAnoFilme";
-            this.txtAnoFilme.Size = new System.Drawing.Size(100, 27);
+            this.txtAnoFilme.Size = new System.Drawing.Size(138, 30);
             this.txtAnoFilme.TabIndex = 3;
             // 
             // AnoFilme
             // 
             this.AnoFilme.AutoSize = true;
-            this.AnoFilme.Location = new System.Drawing.Point(225, 119);
+            this.AnoFilme.Location = new System.Drawing.Point(214, 133);
+            this.AnoFilme.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.AnoFilme.Name = "AnoFilme";
-            this.AnoFilme.Size = new System.Drawing.Size(39, 18);
+            this.AnoFilme.Size = new System.Drawing.Size(52, 23);
             this.AnoFilme.TabIndex = 2;
             this.AnoFilme.Text = "Ano";
             // 
             // txtCodFilme
             // 
-            this.txtCodFilme.Location = new System.Drawing.Point(289, 86);
+            this.txtCodFilme.Location = new System.Drawing.Point(319, 95);
+            this.txtCodFilme.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCodFilme.Name = "txtCodFilme";
-            this.txtCodFilme.Size = new System.Drawing.Size(100, 27);
+            this.txtCodFilme.Size = new System.Drawing.Size(138, 30);
             this.txtCodFilme.TabIndex = 1;
             // 
             // CodFilme
             // 
             this.CodFilme.AutoSize = true;
-            this.CodFilme.Location = new System.Drawing.Point(219, 86);
+            this.CodFilme.Location = new System.Drawing.Point(213, 95);
+            this.CodFilme.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CodFilme.Name = "CodFilme";
-            this.CodFilme.Size = new System.Drawing.Size(64, 18);
+            this.CodFilme.Size = new System.Drawing.Size(80, 23);
             this.CodFilme.TabIndex = 0;
             this.CodFilme.Text = "Código";
             // 
             // txtNovo
             // 
-            this.txtNovo.Location = new System.Drawing.Point(60, 26);
+            this.txtNovo.Location = new System.Drawing.Point(115, 33);
+            this.txtNovo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNovo.Name = "txtNovo";
-            this.txtNovo.Size = new System.Drawing.Size(75, 29);
+            this.txtNovo.Size = new System.Drawing.Size(105, 37);
             this.txtNovo.TabIndex = 2;
             this.txtNovo.Text = "Novo";
             this.txtNovo.UseVisualStyleBackColor = true;
@@ -201,9 +227,10 @@ namespace projLocadora
             // 
             // txtModificar
             // 
-            this.txtModificar.Location = new System.Drawing.Point(407, 26);
+            this.txtModificar.Location = new System.Drawing.Point(681, 33);
+            this.txtModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtModificar.Name = "txtModificar";
-            this.txtModificar.Size = new System.Drawing.Size(98, 29);
+            this.txtModificar.Size = new System.Drawing.Size(137, 37);
             this.txtModificar.TabIndex = 3;
             this.txtModificar.Text = "Modificar";
             this.txtModificar.UseVisualStyleBackColor = true;
@@ -211,9 +238,10 @@ namespace projLocadora
             // 
             // btnProximo
             // 
-            this.btnProximo.Location = new System.Drawing.Point(596, 546);
+            this.btnProximo.Location = new System.Drawing.Point(512, 491);
+            this.btnProximo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnProximo.Name = "btnProximo";
-            this.btnProximo.Size = new System.Drawing.Size(75, 23);
+            this.btnProximo.Size = new System.Drawing.Size(105, 29);
             this.btnProximo.TabIndex = 4;
             this.btnProximo.Text = ">";
             this.btnProximo.UseVisualStyleBackColor = true;
@@ -221,9 +249,10 @@ namespace projLocadora
             // 
             // btnUltimo
             // 
-            this.btnUltimo.Location = new System.Drawing.Point(690, 546);
+            this.btnUltimo.Location = new System.Drawing.Point(681, 491);
+            this.btnUltimo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUltimo.Name = "btnUltimo";
-            this.btnUltimo.Size = new System.Drawing.Size(75, 23);
+            this.btnUltimo.Size = new System.Drawing.Size(105, 29);
             this.btnUltimo.TabIndex = 5;
             this.btnUltimo.Text = ">>";
             this.btnUltimo.UseVisualStyleBackColor = true;
@@ -231,9 +260,10 @@ namespace projLocadora
             // 
             // btnAnterior
             // 
-            this.btnAnterior.Location = new System.Drawing.Point(213, 546);
+            this.btnAnterior.Location = new System.Drawing.Point(300, 491);
+            this.btnAnterior.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAnterior.Name = "btnAnterior";
-            this.btnAnterior.Size = new System.Drawing.Size(75, 23);
+            this.btnAnterior.Size = new System.Drawing.Size(105, 29);
             this.btnAnterior.TabIndex = 6;
             this.btnAnterior.Text = "<";
             this.btnAnterior.UseVisualStyleBackColor = true;
@@ -241,9 +271,10 @@ namespace projLocadora
             // 
             // btnPrimeiro
             // 
-            this.btnPrimeiro.Location = new System.Drawing.Point(111, 546);
+            this.btnPrimeiro.Location = new System.Drawing.Point(132, 491);
+            this.btnPrimeiro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPrimeiro.Name = "btnPrimeiro";
-            this.btnPrimeiro.Size = new System.Drawing.Size(75, 23);
+            this.btnPrimeiro.Size = new System.Drawing.Size(105, 29);
             this.btnPrimeiro.TabIndex = 7;
             this.btnPrimeiro.Text = "<<";
             this.btnPrimeiro.UseVisualStyleBackColor = true;
@@ -251,9 +282,10 @@ namespace projLocadora
             // 
             // txtExcluir
             // 
-            this.txtExcluir.Location = new System.Drawing.Point(288, 26);
+            this.txtExcluir.Location = new System.Drawing.Point(497, 33);
+            this.txtExcluir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtExcluir.Name = "txtExcluir";
-            this.txtExcluir.Size = new System.Drawing.Size(86, 29);
+            this.txtExcluir.Size = new System.Drawing.Size(120, 37);
             this.txtExcluir.TabIndex = 8;
             this.txtExcluir.Text = "Excluir";
             this.txtExcluir.UseVisualStyleBackColor = true;
@@ -261,9 +293,10 @@ namespace projLocadora
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(168, 26);
+            this.btnSalvar.Location = new System.Drawing.Point(300, 33);
+            this.btnSalvar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(82, 29);
+            this.btnSalvar.Size = new System.Drawing.Size(115, 37);
             this.btnSalvar.TabIndex = 9;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
@@ -271,10 +304,10 @@ namespace projLocadora
             // 
             // frmFilmes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(889, 597);
+            this.ClientSize = new System.Drawing.Size(933, 565);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.txtExcluir);
             this.Controls.Add(this.btnPrimeiro);
@@ -284,7 +317,8 @@ namespace projLocadora
             this.Controls.Add(this.txtModificar);
             this.Controls.Add(this.txtNovo);
             this.Controls.Add(this.groupBox1);
-            this.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmFilmes";

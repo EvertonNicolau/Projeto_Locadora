@@ -122,7 +122,47 @@ namespace projLocadora
             }
             else
             {
+                string sql = "UPDATE tb_Filme set tituloFilme='" + txtTituloFilme.Text + 
+                   "', anoFilme =" + txtAnoFilme.Text + ", codProd=" + cmbProdutora.SelectedValue.ToString() +
+                   ", generoFilme='" + cmbGenero.Text + "' WHERE codFilme=" + txtCodFilme.Text;
+                SqlConnection con = new SqlConnection(connectionString);
+                SqlCommand cmd = new SqlCommand(sql, con);
+                cmd.CommandType = CommandType.Text;
+                SqlDataReader reader;
+                con.Open();
+                try
+                {
+                    int i = cmd.ExecuteNonQuery();
+                    if (i > 0)
+                    {
+                        MessageBox.Show("Filme atualizado com sucesso");
+                        this.frmFilmes_Load(this, e);
+                    }
 
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro: " + ex.ToString());
+                }
+                finally
+                {
+                    con.Close();
+                }
+                btnSalvar.Enabled = false;
+                txtNovo.Enabled = true;
+                txtTituloFilme.Enabled = false;
+                txtCodFilme.Enabled = true;
+                txtAnoFilme.Enabled = false;
+                cmbProdutora.Enabled = true;
+                cmbGenero.Enabled = true;
+                txtExcluir.Enabled = true;
+                txtModificar.Enabled = true;
+                btnPrimeiro.Enabled = true;
+                btnAnterior.Enabled = true;
+                btnProximo.Enabled = true;
+                btnUltimo.Enabled = true;
+                frmFilmes_Load(this, e);
+                navegar();
             }
 
         }
@@ -242,8 +282,7 @@ namespace projLocadora
 
         private void txtModificar_Click(object sender, EventArgs e)
         {
-            novo: true;
-            btnSalvar.Enabled = false;
+            btnSalvar.Enabled = true;
             txtTituloFilme.Enabled = false;
             txtCodFilme.Enabled = false;
             txtAnoFilme.Enabled = false;
@@ -261,7 +300,6 @@ namespace projLocadora
 
         private void txtNovo_Click(object sender, EventArgs e)
         {
-            novo: true;
             btnSalvar.Enabled = false;
             txtTituloFilme.Enabled = false;
             txtTituloFilme.Clear();

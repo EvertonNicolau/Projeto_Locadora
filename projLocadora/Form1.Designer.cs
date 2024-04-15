@@ -49,7 +49,8 @@ namespace projLocadora
             this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 33);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(14, 3, 0, 3);
+            this.menuStrip1.Size = new System.Drawing.Size(1244, 31);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -61,8 +62,9 @@ namespace projLocadora
             this.toolStripMenuItem2,
             this.toolStripMenuItem3,
             this.sairToolStripMenuItem});
+            this.toolStripMenuItem1.Font = new System.Drawing.Font("Cooper Black", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(99, 29);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(109, 25);
             this.toolStripMenuItem1.Text = "Cadastro";
             // 
             // produtorasToolStripMenuItem
@@ -105,13 +107,16 @@ namespace projLocadora
             // 
             // frmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1244, 517);
             this.Controls.Add(this.menuStrip1);
+            this.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmPrincipal";
