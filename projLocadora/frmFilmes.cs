@@ -96,7 +96,8 @@ namespace projLocadora
         {
             if (novo)
             {
-                String sql = "INSERT INTO tb_Filmes(tiTuloFilme, anoFilme, codProd, generoFilme) VALUES ('" + txtTituloFilme.Text + "'," + txtAnoFilme.Text + ",'" + cmbProdutora.SelectedValue.ToString() + ",'" + cmbGenero.Text + "')";
+                String sql = "INSERT INTO tb_Filme(tiTuloFilme, anoFilme, codProd, generoFilme) VALUES ('" + txtTituloFilme.Text + "',"
+                    + txtAnoFilme.Text + "," + cmbProdutora.SelectedValue.ToString() + ",'" + cmbGenero.Text + "')";
                 SqlConnection con = new SqlConnection(connectionString);
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.CommandType = CommandType.Text;
@@ -282,11 +283,12 @@ namespace projLocadora
 
         private void txtModificar_Click(object sender, EventArgs e)
         {
+            novo = false;
             btnSalvar.Enabled = true;
-            txtTituloFilme.Enabled = false;
+            txtTituloFilme.Enabled = true;
             txtCodFilme.Enabled = false;
-            txtAnoFilme.Enabled = false;
-            cmbProdutora.Enabled = false;
+            txtAnoFilme.Enabled = true;
+            cmbProdutora.Enabled = true;
             cmbGenero.Enabled = true;
             txtExcluir.Enabled = true;
             txtModificar.Enabled = true;
@@ -300,13 +302,14 @@ namespace projLocadora
 
         private void txtNovo_Click(object sender, EventArgs e)
         {
-            btnSalvar.Enabled = false;
-            txtTituloFilme.Enabled = false;
+            novo = true;
+            btnSalvar.Enabled = true;
+            txtTituloFilme.Enabled = true;
             txtTituloFilme.Clear();
             txtCodFilme.Enabled = false;
-            txtAnoFilme.Enabled = false;
+            txtAnoFilme.Enabled = true;
             txtAnoFilme.Clear();
-            cmbProdutora.Enabled = false;
+            cmbProdutora.Enabled = true;
             cmbGenero.Enabled = true;
             cmbGenero.SelectedIndex = -1;
             txtExcluir.Enabled = true;

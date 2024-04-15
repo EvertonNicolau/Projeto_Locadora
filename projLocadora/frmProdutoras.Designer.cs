@@ -236,7 +236,7 @@ namespace projLocadora
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(973, 389);
+            this.ClientSize = new System.Drawing.Size(971, 428);
             this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnSalvar);
